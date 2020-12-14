@@ -2,6 +2,7 @@
 @import "global";
 @import "fonts";
 
+//header-top
 .header_top {
   background-color: #eef1f3;
 }
@@ -28,6 +29,13 @@
   font-size: 12px;
   background-color: $blue;
 }
+
+.header_box {
+  a + a {
+    margin-left: 33px;
+  }
+}
+
 .header_seler {
   margin-left: 50px;
   display: flex;
@@ -49,6 +57,8 @@
 .seller_balance {
   color: $blue;
 }
+
+//Header Menu
 .menu {
   display: flex;
   justify-content: space-between;
@@ -73,59 +83,41 @@
 
 .header_search form {
   font-family: "Quicksand", sans-serif;
+  width: 360px;
   position: relative;
   input {
-    width: 360px;
+    width: 100%;
     height: 45px;
     border: 1px solid #d9dfe5;
     border-radius: 25px;
     padding-left: 25px;
+    padding-right: 80px;
+    &::placeholder {
+      color: $search;
+      font-weight: 400;
+    }
   }
   button {
     position: absolute;
     right: 0;
+    bottom: 0px;
+    padding-top: 5px;
     width: 70px;
     height: 45px;
-    padding: 5px;
     background-color: $blue;
-    border: 1px solid $blue;
+    border: transparent;
     border-radius: 25px;
     cursor: pointer;
-    &:before {
-      content: "\f002";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
+    span {
       color: #fff;
     }
   }
 }
 
-.banner_search {
-  position: absolute;
-  z-index: 3;
-  width: 1140px;
-  height: 133px;
-  border-radius: 4px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  input {
-    width: 610px;
-    height: 55px;
-    border: 1px solid #dcdcdc;
-    border-radius: 4px;
-  }
-  select {
-    border: 1px solid #dcdcdc;
-    border-radius: 4px;
-    width: 195px;
-    height: 55px;
-  }
-}
-
+//Banner
 .banner {
   position: relative;
-  height: 720px;
+  min-height: 720px;
   background-color: #2b2b2b;
 }
 
@@ -142,21 +134,25 @@
   );
 }
 
-.banner_text {
+.banner_inner {
   font-family: "Quicksand", sans-serif;
   text-align: center;
-  font-size: 60px;
-  line-height: 72px;
   margin: 183px auto;
   color: rgb(243, 243, 248);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-  .bold {
+  &-title {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  span {
     font-weight: 700;
     display: inline-block;
+    margin-bottom: 50px;
   }
-  .regular {
+  &-text {
     font-size: 20px;
     display: inline-block;
+    margin-bottom: 70px;
   }
   button {
     cursor: pointer;
@@ -180,6 +176,77 @@
   }
 }
 
+.banner_search {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  position: absolute;
+  bottom: -70px;
+  left: 195px;
+  z-index: 5;
+  width: 1140px;
+  height: 135px;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  input {
+    width: 805px;
+    height: 55px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding-left: 28px;
+    padding-right: 205px;
+    color: $search;
+  }
+  select {
+    position: absolute;
+    top: 41px;
+    right: 297px;
+    border: none;
+    border-left: 1px solid #dcdcdc;
+    width: 195px;
+    height: 53px;
+    option {
+      color: $search;
+    }
+  }
+  button {
+    margin-left: 30px;
+    background-color: $blue;
+    border: transparent;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    padding: 19px 68px;
+    cursor: pointer;
+  }
+}
+
+.banner_shadow-1 {
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.502;
+  width: 1110px;
+  height: 135px;
+  z-index: 4;
+  position: absolute;
+  left: 210px;
+  bottom: -57px;
+}
+
+.banner_shadow-2 {
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.502;
+  position: absolute;
+  left: 225px;
+  bottom: -44px;
+  width: 1080px;
+  height: 135px;
+  z-index: 3;
+}
+
+//Features
 .features_items {
   position: relative;
   display: flex;
