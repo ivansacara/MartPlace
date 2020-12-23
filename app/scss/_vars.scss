@@ -1,3 +1,22 @@
 $blue: #0674ec;
+$violet: #7347c1;
 $bggray: #eff1f5;
 $search: #91969d;
+$text: #555555;
+$btnbg: #f1f3f6;
+$btncolor: #a6abb3;
+
+@mixin f400 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+@mixin f500 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+@mixin f700 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
